@@ -1,34 +1,69 @@
-ul{
-    list-style: none;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #21222A;
-}
-img{
-    width: 50px;
-    padding-left: 20px;
-    height: 50px;
-    padding-right: 20px;
-}
-.nav-items{
-    display: flex;
-}
-.nav-items > li{
-    padding: 20px;
-    font-weight: bold;
-    color: #61DAFB;
-}
-body {
+*{
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    font-family: Inter, sans-serif;
 }
-.logo{
+.navbar{
+    background-color: #21222A;
+    color:#61DAFB;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    font-size: 18px;
 }
-.logo > h2{
-    color:#61DAFB
+.nav-list a{
+    color:#61DAFB;
+    text-decoration:none ;
+}
+.nav-list{
+    list-style-type: none;
+}
+.nav-list li{
+    display: inline-block;
+    padding: 20px 10px;
+}
+.nav-list a:hover{
+    border-bottom: 3px solid #61DAFB;
+}
+.menu{
+    display: none;
+}
+.menu-item{
+    width: 20px;
+    height: 3px;
+    background-color: #61DAFB;
+    margin-bottom: 4px;
+}
+@media all and (max-width: 480px){
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    .nav-list{
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .nav-list li{
+        display: block;
+        border-top: 1px solid  #61DAFB;
+    }
+    .navbar .brand-container{
+        width: 100%;
+    }
+    
+    .brandname{
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    .active{
+        display: block;
+    }
 }
