@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 50px;
+}
+.nav-items{
+    display: flex;
+}
+.nav-items > li{
+    padding: 20px;
+}
